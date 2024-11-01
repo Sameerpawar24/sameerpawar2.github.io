@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Pawar's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      background: #f8f9fa;
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation Styling */
+    nav {
+      background: #1c1c1e;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #ff6b6b;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffdd40;
+    }
+
+    /* Hero Section Styling */
+    #hero {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ffd460 100%);
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+
+    #hero h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      padding: 0.75rem 2rem;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* About Section Styling */
+    #about {
+      background: #f8f8fa;
+      padding-top: 3rem;
+    }
+
+    #about .profile-photo {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Project List Styling */
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .project {
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      width: 250px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .project h3 {
+      color: #ff6b6b;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .project p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .project a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .project a:hover {
+      color: #6a11cb;
+    }
+
+    /* Achievements Section */
+    #achievements ul {
+      list-style-type: disc;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #666;
+    }
+
+    #achievements ul li {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+
+    /* Gallery Section */
+    #gallery .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #gallery .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    #gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Resume Download Styling */
+    #resume .button {
+      padding: 0.75rem 2rem;
+      background-color: #ff6b6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    #resume .button:hover {
+      background-color: #e04e4e;
+    }
+
+    /* Contact Section Styling */
+    #contact {
+      background: #f8f8fa;
+      padding: 3rem 1rem;
+    }
+
+    #contact p {
+      color: #333;
+    }
+
+    /* Footer Styling */
+    footer {
+      background: #1c1c1e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Section -->
+  <nav>
+    <h1>Sameer Pawar</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Hello, I'm Sameer Pawar</h2>
+    <p>B.Tech in Electronics and Telecommunication Engineering | Machine Learning Enthusiast</p>
+    <a href="#projects" class="button">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="C:\Users\pawar\Downloads\Portfolio\20230314_165718__1___1_-removebg-preview.png" alt="Sameer Pawar's Photo" class="profile-photo">
+    <p>
+      I'm a final-year B.Tech student specializing in Electronics and Telecommunication Engineering with experience in recommendation systems, predictive models, and more.
+      Skilled in Python, SQL, Machine Learning, Data Science, NLP, and Deep Learning.
+    </p>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Secured Runner-up position in Nebulanet ML Hackthon at IIT BHU Varanasi</li>
+      <li>Got A+ Grade by RS System Pvt Ltd in Java Internship</li>
+      <li>Designed 40+ Predictive ML Models from Beginner to Advanced Level</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Project 1: Crop Recommendation System</h3>
+        <p>Description: The system collects data on soil properties, climate patterns, crop characteristics, and past performance to train ML models.
+           These models utilize algorithms to predict the most suitable crops for a given set of input parameters.</p>
+        <a href="https://crop-reccomendation-system-using-machine.onrender.com/" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Other Projects</h3>
+        <p>All Are Uploaded On GitHub</p>
+        <a href="https://github.com/Sameerpawar24" target="_blank">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="C:\Users\pawar\Downloads\Portfolio\pres.jpg" alt="Presentation">
+      </div>
+      <div class="gallery-item">
+        <img src="C:\Users\pawar\Downloads\Portfolio\Team1.jpg" alt="Team Management">
+      </div>
+      <div class="gallery-item">
+        <img src="C:\Users\pawar\Downloads\Portfolio\Tech.jpg" alt="Technical Explanation">
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Click the button below to download my resume:</p>
+    <a href="C:\Users\pawar\Downloads\Portfolio\SAMEER_PAWAR_RESUME.pdf" download="Sameer_Pawar_Resume.pdf" class="button">Download Resume</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+    <p>Email: <a href="mailto:pawarsameer710@gmail.com">pawarsameer710@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/sameer-pawar-24s2003" target="_blank">Sameer Pawar</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Sameer Pawar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
